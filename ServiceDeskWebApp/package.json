@@ -1,0 +1,13 @@
+{
+  "name": "service-desk-app",
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "@azure/storage-queue": "^12.18.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0"
+  }
+}

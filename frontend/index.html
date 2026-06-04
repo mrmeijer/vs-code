@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>AZ-204 Sync Test</title>
+</head>
+<body>
+    <h1>AZ-204 Communication Test</h1>
+    <button onclick="callFunction()">Call Azure Function</button>
+    <h3 id="response-output" style="color: green;"></h3>
+
+    <script>
+        async function callFunction() {
+            const outputElement = document.getElementById('response-output');
+            outputElement.innerText = "Calling function...";
+
+            try {
+                // 1. Point this exactly to your local host URL
+                const response = await fetch('http://localhost:7071/api/httpTrigger', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    // 2. Send the JSON body payload
+                    body: JSON.stringify({ name: "Cloud Developer" })
+                });
+
+                // 3. Parse the synchronous string response
+                const data = await response.text();
+                outputElement.innerText = data;
+
+            } catch (error) {
+                console.error("Error calling the function:", error);
+                outputElement.innerText = "Error: Could not reach the function. Check CORS or if the backend is running.";
+            }
+        }
+    </script>
+</body>
+</html>
