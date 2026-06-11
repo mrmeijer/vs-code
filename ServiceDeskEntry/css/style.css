@@ -1,0 +1,84 @@
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
+    }
+    .ticket-container {
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+    h2 {
+      color: #0078d4; /* Azure Blue */
+      margin-top: 0;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #efefef;
+      padding-bottom: 10px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #333;
+    }
+    input[type="text"], textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccd1d9;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
+    textarea {
+      resize: vertical;
+      height: 100px;
+    }
+    button {
+      background-color: #0078d4;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+      width: 100%;
+      transition: background-color 0.2s;
+    }
+    button:hover {
+      background-color: #005a9e;
+    }
+    button:disabled {
+      background-color: #a6a6a6;
+      cursor: not-allowed;
+    }
+    .resolution-box {
+      margin-top: 25px;
+      padding: 15px;
+      background-color: #f0fdf4;
+      border-left: 4px solid #16a34a;
+      border-radius: 4px;
+    }
+    .resolution-box h3 {
+      margin: 0 0 8px 0;
+      color: #16a34a;
+      font-size: 16px;
+    }
+    .resolution-box p {
+      margin: 0;
+      color: #1f2937;
+      line-height: 1.5;
+    }
+    .loading-text {
+      color: #0078d4;
+      font-style: italic;
+    }
