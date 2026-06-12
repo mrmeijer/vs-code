@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Service Desk Ticket Portal</title>
-  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
 
 </head>
 <body ng-app="TicketApp" ng-controller="TicketController">
@@ -15,7 +15,12 @@
     <form ng-submit="onSubmit()" name="ticketForm" novalidate>
       
       <div class="form-group">
-        <label for="title">Issue Title:</label>
+        <label for="title">Ticket Number:</label>
+        <input type="number" id="number" name="number" ng-model="ticket.number" required placeholder="e.g. 1007">
+      </div>
+      
+      <div class="form-group">
+        <label for="title">Ticket Title:</label>
         <input type="text" id="title" name="title" ng-model="ticket.title" required placeholder="e.g., Cannot connect to VPN">
       </div>
       
@@ -24,6 +29,21 @@
         <textarea id="description" name="description" ng-model="ticket.description" required placeholder="Describe the steps to reproduce the error..."></textarea>
       </div>
 
+      <div class="form-group">
+        <label for="title">Submitter:</label>
+        <input type="text" id="submitter" name="submitter" ng-model="ticket.submitter" required placeholder="Enter your name">
+      </div>
+      
+      <div class="form-group">
+        <label for="title">Category:</label>
+        <input type="text" id="category" name="category" ng-model="ticket.category" required placeholder="e.g., Connectivity, Application, or Peripheral">
+      </div>
+      
+      <div class="form-group">
+        <label for="title">Ticket Priority:</label>
+        <input type="number" id="priority" name="priority" ng-model="ticket.priority" min="1" max="5" required placeholder="1 to 5">
+      </div>
+      
       <button type="submit" ng-disabled="ticketForm.$invalid">Submit & Get Resolution</button>
     </form>
 
@@ -33,7 +53,7 @@
     </div>
   </div>
 
-  <script src="scrypt/app.js"></script>
+  <script src="script/app.js"></script>
 
 </body>
 </html>

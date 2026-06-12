@@ -30,6 +30,14 @@
       font-weight: 600;
       color: #333;
     }
+    input[type="number"], textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccd1d9;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 14px;
+    }
     input[type="text"], textarea {
       width: 100%;
       padding: 10px;
@@ -55,7 +63,7 @@
       transition: background-color 0.2s;
     }
     button:hover {
-      background-color: #005a9e;
+      background-color: #009e28;
     }
     button:disabled {
       background-color: #a6a6a6;
